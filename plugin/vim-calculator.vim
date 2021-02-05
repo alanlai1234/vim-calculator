@@ -1,7 +1,15 @@
+" Last Change: 2021/2/5
+" Maintainter: Alan Lai
+" License: under public domain
 if exists("g:loaded_vimcalculator")
 	finish
 endif
 let g:loaded_vimcalculator = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 if !has('python3')
     echo "Error: Required vim/neovim with python support"
