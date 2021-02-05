@@ -1,6 +1,8 @@
 # vim-calculator
 
 a simple calculator inside vim
+<img alt="Gif" src="https://raw.githubusercontent.com/alanlai1234/vim-calculator/main/image/demonstrate.gif" />
+
 ## Installation
 
 use your package manager
@@ -13,11 +15,11 @@ Plug 'alanlai1234/vim-calculator'
 1. keybinding:
 
 * default:
-```vimscript
+```vim
 <leader>m
 ```
 * customize:
-```vimscript
+```vim
 nmap [key] <Plug>calc_launch
 ```
 2. cancel input : ```<esc>```
