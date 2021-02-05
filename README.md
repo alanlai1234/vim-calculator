@@ -6,7 +6,7 @@ a simple calculator inside vim
 ## Installation
 
 use your package manager
-```vimscript
+```vim
 Plug 'alanlai1234/vim-calculator'
 ```
 
