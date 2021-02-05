@@ -1,0 +1,29 @@
+import vim
+
+def launch():
+    vim.command("let in = input('calculator>>')")
+    string = vim.eval('in')
+    if(string[-1]=="="):
+        string = string[0:len(string)-2]
+    vim.command("redraw")
+    print(calc(string))
+    
+
+def calc(s):
+    total = 0
+    i, signs = 0, [1, 1]
+    while i < len(s):
+        c = s[i]
+        if c.isdigit():
+            start = i
+            while i < len(s) and s[i].isdigit():
+                i += 1
+            total += signs.pop() * int(s[start:i])
+            continue
+        if c in '+-(':
+            signs += signs[-1] * (1, -1)[c == '-'],
+        elif c == ')':
+            signs.pop()
+        i += 1
+    return total
+
