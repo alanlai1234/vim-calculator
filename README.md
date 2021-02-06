@@ -9,6 +9,9 @@ use your package manager
 ```vim
 Plug 'alanlai1234/vim-calculator'
 ```
+vim/neovim python support
+* vim - check ```vim --version``` has +python
+* neovim - ```pip install pynvim```
 
 ## Usage
 
